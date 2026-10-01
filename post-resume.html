@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Создать анкету | HelpMate</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <header class="site-header"><div class="container nav-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">HM</span><span>HelpMate</span></a>
+    <nav class="main-nav"><a href="index.html">Главная</a><a href="jobs.html">Вакансии</a><a href="students.html">Студенты</a><a href="post-job.html">Разместить вакансию</a><a class="active" href="post-resume.html">Создать анкету</a></nav>
+    <div class="nav-auth"><a class="button button-quiet button-small" href="profile.html">Профиль</a><a class="button button-primary button-small" href="applications.html">Отклики</a></div>
+    <details class="mobile-menu"><summary class="button button-secondary button-small">Меню</summary><nav class="mobile-panel"><a href="index.html">Главная</a><a href="jobs.html">Вакансии</a><a href="students.html">Студенты</a><a href="profile.html">Профиль</a></nav></details>
+  </div></header>
+  <main id="main" class="page-main">
+    <div class="container">
+      <header class="page-heading"><p class="eyebrow">Для студентов</p><h1>Создайте рабочую анкету</h1><p>Покажите навыки, учебные проекты и время, которое готовы уделять работе.</p></header>
+      <div class="detail-grid">
+        <form class="form-panel" action="profile.html">
+          <div class="form-grid">
+            <div class="field"><label for="name">Имя и фамилия</label><input class="input" id="name" type="text" placeholder="Ваше полное имя" required></div>
+            <div class="field"><label for="city">Город</label><select class="select" id="city" required><option value="">Выберите город</option><option>Алматы</option><option>Астана</option><option>Шымкент</option><option>Караганда</option></select></div>
+            <div class="field"><label for="university">Университет</label><input class="input" id="university" type="text" placeholder="Название университета"></div>
+            <div class="field"><label for="course">Курс</label><select class="select" id="course"><option>1 курс</option><option>2 курс</option><option>3 курс</option><option>4 курс</option><option>Магистратура</option></select></div>
+            <div class="field field-full"><label for="speciality">Специальность</label><input class="input" id="speciality" type="text" placeholder="Например, маркетинг или информационные системы"></div>
+            <div class="field field-full"><label for="skills">Навыки</label><input class="input" id="skills" type="text" placeholder="Например, HTML, CSS, Figma, Excel"><small>Разделяйте навыки запятыми.</small></div>
+            <div class="field"><label for="hours">Доступность</label><select class="select" id="hours"><option>До 10 часов в неделю</option><option>10-20 часов в неделю</option><option>20-30 часов в неделю</option></select></div>
+            <div class="field"><label for="format">Формат работы</label><select class="select" id="format"><option>Любой</option><option>Удаленно</option><option>В офисе</option><option>Гибрид</option></select></div>
+            <div class="field field-full"><label for="about">О себе</label><textarea class="textarea" id="about" placeholder="Расскажите, чему учитесь и какую работу ищете" required></textarea></div>
+            <div class="field field-full"><label for="projects">Учебные проекты или опыт</label><textarea class="textarea" id="projects" placeholder="Опишите проект, свою роль и результат"></textarea></div>
+            <label class="checkbox-row field-full"><input type="checkbox" required>Разрешаю работодателям видеть мою анкету и отправлять приглашения.</label>
+          </div>
+          <div class="form-actions"><button class="button button-primary" type="submit">Сохранить анкету</button><button class="button button-secondary" type="reset">Очистить форму</button></div>
+        </form>
+        <aside class="sidebar"><h2>Что добавить</h2><p>Даже без официального опыта можно указать курсовые работы, волонтерство, студенческие клубы и личные проекты.</p><div class="alert">Контактные данные скрыты до начала переписки.</div><a class="button button-quiet" href="jobs.html">Посмотреть вакансии</a></aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 HelpMate</span><a href="about.html">Советы студентам</a></div></div></footer>
+</body>
+</html>

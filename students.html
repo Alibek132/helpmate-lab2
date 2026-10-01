@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог студентов, готовых к работе и стажировке.">
+  <title>Студенты | HelpMate</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <header class="site-header"><div class="container nav-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">HM</span><span>HelpMate</span></a>
+    <nav class="main-nav"><a href="index.html">Главная</a><a href="jobs.html">Вакансии</a><a class="active" href="students.html">Студенты</a><a href="post-job.html">Разместить вакансию</a><a href="post-resume.html">Создать анкету</a></nav>
+    <div class="nav-auth"><a class="button button-quiet button-small" href="login.html">Войти</a><a class="button button-primary button-small" href="register.html">Регистрация</a></div>
+    <details class="mobile-menu"><summary class="button button-secondary button-small">Меню</summary><nav class="mobile-panel"><a href="index.html">Главная</a><a href="jobs.html">Вакансии</a><a href="students.html">Студенты</a><a href="post-job.html">Разместить вакансию</a><a href="profile.html">Профиль</a></nav></details>
+  </div></header>
+  <main id="main" class="page-main">
+    <div class="container">
+      <header class="page-heading"><p class="eyebrow">Для работодателей</p><h1>Найдите мотивированного студента</h1><p>Смотрите навыки, доступный график и портфолио кандидатов.</p></header>
+      <form class="toolbar" action="students.html">
+        <div class="field"><label for="skill">Навык или специальность</label><input class="input" id="skill" type="search" placeholder="Например, SMM или дизайн"></div>
+        <div class="field"><label for="city">Город</label><select class="select" id="city"><option>Все города</option><option>Алматы</option><option>Астана</option><option>Караганда</option></select></div>
+        <div class="field"><label for="schedule">Доступность</label><select class="select" id="schedule"><option>Любая</option><option>Днем</option><option>Вечером</option><option>Выходные</option></select></div>
+        <button class="button button-primary" type="submit">Показать</button>
+      </form>
+      <section class="student-grid" aria-label="Каталог студентов">
+        <article class="student-card"><img class="avatar" src="https://i.pravatar.cc/240?img=47" alt="Айдана Серикова"><div><h2 class="card-title"><a href="student-profile.html">Айдана Серикова</a></h2><p class="card-subtitle">SMM и контент, 3 курс, Алматы</p><div class="tag-row"><span class="tag">Canva</span><span class="tag">Копирайтинг</span><span class="tag">20 ч/нед</span></div><a class="button button-secondary button-small" href="student-profile.html">Смотреть профиль</a></div></article>
+        <article class="student-card"><img class="avatar" src="https://i.pravatar.cc/240?img=12" alt="Диас Нурланов"><div><h2 class="card-title"><a href="student-profile.html">Диас Нурланов</a></h2><p class="card-subtitle">Frontend-разработка, 2 курс, Астана</p><div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Удаленно</span></div><a class="button button-secondary button-small" href="student-profile.html">Смотреть профиль</a></div></article>
+        <article class="student-card"><img class="avatar" src="https://i.pravatar.cc/240?img=32" alt="Зарина Алимова"><div><h2 class="card-title"><a href="student-profile.html">Зарина Алимова</a></h2><p class="card-subtitle">Графический дизайн, 4 курс, Караганда</p><div class="tag-row"><span class="tag">Figma</span><span class="tag">Illustrator</span><span class="tag">Портфолио</span></div><a class="button button-secondary button-small" href="student-profile.html">Смотреть профиль</a></div></article>
+        <article class="student-card"><img class="avatar" src="https://i.pravatar.cc/240?img=68" alt="Темирлан Омаров"><div><h2 class="card-title"><a href="student-profile.html">Темирлан Омаров</a></h2><p class="card-subtitle">Аналитика данных, 3 курс, Алматы</p><div class="tag-row"><span class="tag">Excel</span><span class="tag">Python</span><span class="tag">Гибрид</span></div><a class="button button-secondary button-small" href="student-profile.html">Смотреть профиль</a></div></article>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 HelpMate</span><a href="about.html">О проекте</a></div></div></footer>
+</body>
+</html>

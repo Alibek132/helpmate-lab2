@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Разместить вакансию | HelpMate</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <header class="site-header"><div class="container nav-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">HM</span><span>HelpMate</span></a>
+    <nav class="main-nav"><a href="index.html">Главная</a><a href="jobs.html">Вакансии</a><a href="students.html">Студенты</a><a class="active" href="post-job.html">Разместить вакансию</a><a href="post-resume.html">Создать анкету</a></nav>
+    <div class="nav-auth"><a class="button button-quiet button-small" href="profile.html">Профиль</a><a class="button button-primary button-small" href="applications.html">Отклики</a></div>
+    <details class="mobile-menu"><summary class="button button-secondary button-small">Меню</summary><nav class="mobile-panel"><a href="index.html">Главная</a><a href="jobs.html">Вакансии</a><a href="students.html">Студенты</a><a href="profile.html">Профиль</a></nav></details>
+  </div></header>
+  <main id="main" class="page-main">
+    <div class="container">
+      <header class="page-heading"><p class="eyebrow">Для работодателей</p><h1>Опубликуйте вакансию</h1><p>Расскажите о задачах, графике и оплате. Студенты смогут откликнуться через платформу.</p></header>
+      <div class="detail-grid">
+        <form class="form-panel" action="applications.html">
+          <div class="form-grid">
+            <div class="field field-full"><label for="title">Название вакансии</label><input class="input" id="title" type="text" placeholder="Например, ассистент маркетолога" required><small>Используйте понятное название без сокращений.</small></div>
+            <div class="field"><label for="company">Компания</label><input class="input" id="company" type="text" placeholder="Название компании" required></div>
+            <div class="field"><label for="city">Город</label><select class="select" id="city" required><option value="">Выберите город</option><option>Алматы</option><option>Астана</option><option>Шымкент</option><option>Удаленно</option></select></div>
+            <div class="field"><label for="format">Формат работы</label><select class="select" id="format"><option>В офисе</option><option>Гибрид</option><option>Удаленно</option></select></div>
+            <div class="field"><label for="hours">Занятость</label><select class="select" id="hours"><option>До 10 часов в неделю</option><option>10-20 часов в неделю</option><option>20-30 часов в неделю</option><option>Полный день</option></select></div>
+            <div class="field"><label for="salary">Оплата</label><input class="input" id="salary" type="text" placeholder="Например, 160 000 ₸"></div>
+            <div class="field"><label for="experience">Требуемый опыт</label><select class="select" id="experience"><option>Без опыта</option><option>Учебные проекты</option><option>От 6 месяцев</option></select></div>
+            <div class="field field-full"><label for="description">Описание задач</label><textarea class="textarea" id="description" placeholder="Опишите основные задачи и результат работы" required></textarea></div>
+            <div class="field field-full"><label for="requirements">Требования</label><textarea class="textarea" id="requirements" placeholder="Укажите навыки, языки и личные качества"></textarea></div>
+            <label class="checkbox-row field-full"><input type="checkbox" required>Я подтверждаю достоверность условий и готов отвечать кандидатам через HelpMate.</label>
+          </div>
+          <div class="form-actions"><button class="button button-primary" type="submit">Опубликовать</button><button class="button button-secondary" type="reset">Очистить форму</button></div>
+        </form>
+        <aside class="sidebar"><h2>Хорошая вакансия</h2><p>Укажите конкретные задачи, реальный график и размер оплаты. Не запрашивайте у кандидатов банковские данные.</p><div class="alert">После публикации вакансия появится в каталоге и в вашем профиле.</div><a class="button button-quiet" href="students.html">Сначала посмотреть студентов</a></aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 HelpMate</span><a href="about.html">Правила размещения</a></div></div></footer>
+</body>
+</html>
+

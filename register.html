@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация | HelpMate</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <header class="site-header"><div class="container nav-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">HM</span><span>HelpMate</span></a>
+    <nav class="main-nav"><a href="index.html">Главная</a><a href="jobs.html">Вакансии</a><a href="students.html">Студенты</a><a href="about.html">О проекте</a></nav>
+    <div class="nav-auth"><a class="button button-quiet button-small" href="login.html">Войти</a></div>
+    <details class="mobile-menu"><summary class="button button-secondary button-small">Меню</summary><nav class="mobile-panel"><a href="index.html">Главная</a><a href="jobs.html">Вакансии</a><a href="students.html">Студенты</a><a href="login.html">Войти</a></nav></details>
+  </div></header>
+  <main id="main" class="page-main">
+    <div class="container auth-shell">
+      <section class="auth-card">
+        <h1>Создайте аккаунт</h1>
+        <p>Выберите роль. Ее можно будет изменить в настройках профиля.</p>
+        <form class="auth-form" action="profile.html">
+          <div class="field"><label for="role">Ваша роль</label><select class="select" id="role" required><option value="">Выберите роль</option><option>Студент</option><option>Работодатель</option></select></div>
+          <div class="field"><label for="name">Имя или название компании</label><input class="input" id="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" required></div>
+          <div class="field"><label for="email">Электронная почта</label><input class="input" id="email" type="email" placeholder="name@example.kz" autocomplete="email" required></div>
+          <div class="field"><label for="password">Пароль</label><input class="input" id="password" type="password" placeholder="Не менее 8 символов" autocomplete="new-password" minlength="8" required></div>
+          <label class="checkbox-row"><input type="checkbox" required>Я принимаю правила сервиса и политику конфиденциальности.</label>
+          <button class="button button-primary" type="submit">Зарегистрироваться</button>
+        </form>
+        <p class="auth-footer">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

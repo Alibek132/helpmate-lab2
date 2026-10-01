@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Вакансии и подработка для студентов Казахстана.">
+  <title>Вакансии | HelpMate</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <header class="site-header"><div class="container nav-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">HM</span><span>HelpMate</span></a>
+    <nav class="main-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a class="active" href="jobs.html">Вакансии</a><a href="students.html">Студенты</a><a href="post-job.html">Разместить вакансию</a><a href="post-resume.html">Создать анкету</a></nav>
+    <div class="nav-auth"><a class="button button-quiet button-small" href="login.html">Войти</a><a class="button button-primary button-small" href="register.html">Регистрация</a></div>
+    <details class="mobile-menu"><summary class="button button-secondary button-small">Меню</summary><nav class="mobile-panel"><a href="index.html">Главная</a><a href="jobs.html">Вакансии</a><a href="students.html">Студенты</a><a href="post-job.html">Разместить вакансию</a><a href="profile.html">Профиль</a></nav></details>
+  </div></header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+      <header class="page-heading"><p class="eyebrow">Для студентов</p><h1>Найдите работу под свой график</h1><p>Стажировки, проектная работа и подработка от компаний Казахстана.</p></header>
+      <form class="toolbar" action="jobs.html">
+        <div class="field"><label for="search">Поиск</label><input class="input" id="search" type="search" placeholder="Должность или навык"></div>
+        <div class="field"><label for="city">Город</label><select class="select" id="city"><option>Все города</option><option>Алматы</option><option>Астана</option><option>Шымкент</option></select></div>
+        <div class="field"><label for="format">Формат</label><select class="select" id="format"><option>Любой</option><option>Удаленно</option><option>В офисе</option><option>Гибрид</option></select></div>
+        <button class="button button-primary" type="submit">Найти</button>
+      </form>
+
+      <div class="content-layout">
+        <section class="card-list" aria-label="Список вакансий">
+          <article class="job-card">
+            <div class="company-logo">QZ</div>
+            <div><h2 class="card-title"><a href="job-details.html">Ассистент маркетолога</a></h2><p class="card-subtitle">Qazaq Digital, Алматы, гибрид</p><div class="tag-row"><span class="tag">Маркетинг</span><span class="tag">20 часов</span><span class="tag">Без опыта</span></div></div>
+            <div><div class="price">160 000 ₸</div><a class="button button-secondary button-small" href="job-details.html">Подробнее</a></div>
+          </article>
+          <article class="job-card">
+            <div class="company-logo">AR</div>
+            <div><h2 class="card-title"><a href="job-details.html">Junior Frontend стажер</a></h2><p class="card-subtitle">Arman Tech, удаленно</p><div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Стажировка</span></div></div>
+            <div><div class="price">180 000 ₸</div><a class="button button-secondary button-small" href="job-details.html">Подробнее</a></div>
+          </article>
+          <article class="job-card">
+            <div class="company-logo">TO</div>
+            <div><h2 class="card-title"><a href="job-details.html">Оператор поддержки</a></h2><p class="card-subtitle">Taza Online, Астана, удаленно</p><div class="tag-row"><span class="tag">Казахский язык</span><span class="tag">Вечером</span></div></div>
+            <div><div class="price">1 300 ₸/час</div><a class="button button-secondary button-small" href="job-details.html">Подробнее</a></div>
+          </article>
+          <article class="job-card">
+            <div class="company-logo">AD</div>
+            <div><h2 class="card-title"><a href="job-details.html">Помощник фотографа</a></h2><p class="card-subtitle">Aspan Design, Шымкент, выездная работа</p><div class="tag-row"><span class="tag">Фото</span><span class="tag">Выходные</span><span class="tag">Проект</span></div></div>
+            <div><div class="price">12 000 ₸/день</div><a class="button button-secondary button-small" href="job-details.html">Подробнее</a></div>
+          </article>
+        </section>
+        <aside class="sidebar"><h2>Покажите себя</h2><p>Заполненная анкета помогает работодателям найти вас самостоятельно.</p><a class="button button-primary" href="post-resume.html">Создать анкету</a><a class="button button-quiet" href="applications.html">Мои отклики</a></aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 HelpMate</span><a href="about.html">О проекте</a></div></div></footer>
+</body>
+</html>
+
