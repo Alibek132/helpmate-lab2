@@ -1,22 +1,24 @@
+/* Общие переменные проекта: цвета, тени, скругления и ширина контента */
 :root {
-  --bg: #e9eef5;
-  --surface: #e9eef5;
-  --surface-strong: #f3f6fa;
-  --text: #1f2a44;
-  --muted: #68758d;
-  --accent: #2563eb;
-  --accent-dark: #1749b6;
-  --accent-soft: #dbe7ff;
-  --success: #237a57;
-  --warning: #a15c08;
-  --danger: #b63b4a;
-  --white-shadow: rgba(255, 255, 255, 0.88);
-  --dark-shadow: rgba(147, 161, 184, 0.48);
-  --radius: 22px;
-  --radius-small: 14px;
-  --container: 1180px;
+  --фон: #e9eef5;
+  --поверхность: #e9eef5;
+  --светлая-поверхность: #f3f6fa;
+  --текст: #1f2a44;
+  --приглушенный-текст: #68758d;
+  --акцент: #2563eb;
+  --темный-акцент: #1749b6;
+  --светлый-акцент: #dbe7ff;
+  --успех: #237a57;
+  --предупреждение: #a15c08;
+  --опасность: #b63b4a;
+  --светлая-тень: rgba(255, 255, 255, 0.88);
+  --темная-тень: rgba(147, 161, 184, 0.48);
+  --скругление: 22px;
+  --маленькое-скругление: 14px;
+  --ширина-контейнера: 1180px;
 }
 
+/* Базовые настройки всех элементов страницы */
 * {
   box-sizing: border-box;
 }
@@ -28,8 +30,8 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  color: var(--text);
-  background: var(--bg);
+  color: var(--текст);
+  background: var(--фон);
   font-family: "Avenir Next", "Segoe UI", Arial, sans-serif;
   line-height: 1.55;
 }
@@ -57,7 +59,7 @@ button,
 }
 
 .container {
-  width: min(calc(100% - 40px), var(--container));
+  width: min(calc(100% - 40px), var(--ширина-контейнера));
   margin-inline: auto;
 }
 
@@ -68,7 +70,7 @@ button,
   z-index: 20;
   padding: 10px 14px;
   color: #fff;
-  background: var(--accent-dark);
+  background: var(--темный-акцент);
   border-radius: 10px;
   transform: translateY(-160%);
 }
@@ -77,6 +79,7 @@ button,
   transform: translateY(0);
 }
 
+/* Шапка сайта и основная навигация */
 .site-header {
   position: sticky;
   top: 0;
@@ -109,13 +112,13 @@ button,
   display: grid;
   place-items: center;
   color: #fff;
-  background: var(--accent);
+  background: var(--акцент);
   border-radius: 13px;
-  box-shadow: 6px 6px 12px var(--dark-shadow), -6px -6px 12px var(--white-shadow);
+  box-shadow: 6px 6px 12px var(--темная-тень), -6px -6px 12px var(--светлая-тень);
 }
 
 .brand small {
-  color: var(--accent);
+  color: var(--акцент);
   font-size: 0.68em;
   letter-spacing: 0.02em;
 }
@@ -129,7 +132,7 @@ button,
 
 .main-nav a {
   padding: 10px 13px;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   border-radius: 12px;
   font-size: 0.92rem;
   font-weight: 650;
@@ -139,9 +142,9 @@ button,
 .main-nav a:hover,
 .main-nav a:focus-visible,
 .main-nav a.active {
-  color: var(--accent-dark);
-  background: var(--surface);
-  box-shadow: inset 3px 3px 7px var(--dark-shadow), inset -3px -3px 7px var(--white-shadow);
+  color: var(--темный-акцент);
+  background: var(--поверхность);
+  box-shadow: inset 3px 3px 7px var(--темная-тень), inset -3px -3px 7px var(--светлая-тень);
   outline: none;
 }
 
@@ -172,9 +175,9 @@ button,
   padding: 16px;
   display: grid;
   gap: 8px;
-  background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: 10px 10px 24px var(--dark-shadow), -10px -10px 24px var(--white-shadow);
+  background: var(--поверхность);
+  border-radius: var(--скругление);
+  box-shadow: 10px 10px 24px var(--темная-тень), -10px -10px 24px var(--светлая-тень);
 }
 
 .mobile-panel a {
@@ -182,6 +185,7 @@ button,
   border-radius: 10px;
 }
 
+/* Кнопки и их состояния */
 .button {
   min-height: 44px;
   padding: 11px 18px;
@@ -190,7 +194,7 @@ button,
   justify-content: center;
   gap: 8px;
   border: 0;
-  border-radius: var(--radius-small);
+  border-radius: var(--маленькое-скругление);
   font-weight: 750;
   line-height: 1;
   white-space: nowrap;
@@ -212,29 +216,29 @@ button,
 
 .button-primary {
   color: #fff;
-  background: var(--accent);
-  box-shadow: 6px 6px 13px var(--dark-shadow), -5px -5px 12px var(--white-shadow);
+  background: var(--акцент);
+  box-shadow: 6px 6px 13px var(--темная-тень), -5px -5px 12px var(--светлая-тень);
 }
 
 .button-primary:hover {
-  background: var(--accent-dark);
+  background: var(--темный-акцент);
 }
 
 .button-secondary {
-  color: var(--accent-dark);
-  background: var(--surface);
-  box-shadow: 6px 6px 13px var(--dark-shadow), -6px -6px 13px var(--white-shadow);
+  color: var(--темный-акцент);
+  background: var(--поверхность);
+  box-shadow: 6px 6px 13px var(--темная-тень), -6px -6px 13px var(--светлая-тень);
 }
 
 .button-quiet {
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   background: transparent;
   box-shadow: inset 0 0 0 1px rgba(104, 117, 141, 0.24);
 }
 
 .button-danger {
   color: #fff;
-  background: var(--danger);
+  background: var(--опасность);
 }
 
 .button-small {
@@ -243,11 +247,13 @@ button,
   font-size: 0.86rem;
 }
 
+/* Основные блоки страниц */
 .page-main {
   min-height: calc(100dvh - 72px);
   padding: 48px 0 76px;
 }
 
+/* Первый экран главной страницы */
 .hero {
   min-height: calc(100dvh - 72px);
   display: grid;
@@ -259,7 +265,7 @@ button,
 
 .eyebrow {
   margin: 0 0 14px;
-  color: var(--accent-dark);
+  color: var(--темный-акцент);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.11em;
@@ -276,13 +282,13 @@ button,
 }
 
 .hero h1 span {
-  color: var(--accent);
+  color: var(--акцент);
 }
 
 .hero-copy {
   margin: 24px 0 0;
   max-width: 600px;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 1.12rem;
 }
 
@@ -304,9 +310,9 @@ button,
   margin-left: auto;
   object-fit: cover;
   object-position: center;
-  border: 10px solid var(--surface);
+  border: 10px solid var(--поверхность);
   border-radius: 42px;
-  box-shadow: 18px 18px 38px var(--dark-shadow), -18px -18px 38px var(--white-shadow);
+  box-shadow: 18px 18px 38px var(--темная-тень), -18px -18px 38px var(--светлая-тень);
 }
 
 .floating-card {
@@ -316,7 +322,7 @@ button,
   width: min(310px, 74%);
   padding: 20px;
   background: rgba(233, 238, 245, 0.95);
-  border-radius: var(--radius);
+  border-radius: var(--скругление);
   box-shadow: 12px 12px 28px rgba(133, 148, 174, 0.56), -10px -10px 24px rgba(255, 255, 255, 0.84);
   backdrop-filter: blur(10px);
 }
@@ -329,7 +335,7 @@ button,
 
 .floating-card p {
   margin: 0;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 0.9rem;
 }
 
@@ -339,8 +345,8 @@ button,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  border-radius: var(--radius);
-  box-shadow: inset 5px 5px 12px var(--dark-shadow), inset -5px -5px 12px var(--white-shadow);
+  border-radius: var(--скругление);
+  box-shadow: inset 5px 5px 12px var(--темная-тень), inset -5px -5px 12px var(--светлая-тень);
 }
 
 .stat {
@@ -359,7 +365,7 @@ button,
 }
 
 .stat span {
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 0.9rem;
 }
 
@@ -382,7 +388,7 @@ button,
 .section-heading p {
   margin: 14px 0 0;
   max-width: 60ch;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
 }
 
 .role-grid {
@@ -394,9 +400,9 @@ button,
 .role-card,
 .soft-card {
   padding: 30px;
-  background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: 10px 10px 24px var(--dark-shadow), -10px -10px 24px var(--white-shadow);
+  background: var(--поверхность);
+  border-radius: var(--скругление);
+  box-shadow: 10px 10px 24px var(--темная-тень), -10px -10px 24px var(--светлая-тень);
 }
 
 .role-card:hover,
@@ -417,7 +423,7 @@ button,
 
 .role-card p,
 .soft-card p {
-  color: var(--muted);
+  color: var(--приглушенный-текст);
 }
 
 .role-card .button {
@@ -435,9 +441,9 @@ button,
   min-height: 440px;
   width: 100%;
   object-fit: cover;
-  border: 9px solid var(--surface);
+  border: 9px solid var(--поверхность);
   border-radius: 36px;
-  box-shadow: 14px 14px 30px var(--dark-shadow), -14px -14px 30px var(--white-shadow);
+  box-shadow: 14px 14px 30px var(--темная-тень), -14px -14px 30px var(--светлая-тень);
 }
 
 .steps {
@@ -451,8 +457,8 @@ button,
   grid-template-columns: 50px 1fr;
   gap: 16px;
   align-items: start;
-  border-radius: var(--radius-small);
-  box-shadow: inset 4px 4px 10px var(--dark-shadow), inset -4px -4px 10px var(--white-shadow);
+  border-radius: var(--маленькое-скругление);
+  box-shadow: inset 4px 4px 10px var(--темная-тень), inset -4px -4px 10px var(--светлая-тень);
 }
 
 .step-number {
@@ -461,7 +467,7 @@ button,
   display: grid;
   place-items: center;
   color: #fff;
-  background: var(--accent);
+  background: var(--акцент);
   border-radius: 13px;
   font-weight: 800;
 }
@@ -473,7 +479,7 @@ button,
 
 .step p {
   margin-top: 5px;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
 }
 
 .page-heading {
@@ -487,10 +493,11 @@ button,
 .page-heading p {
   margin: 16px 0 0;
   max-width: 66ch;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 1.05rem;
 }
 
+/* Поиск, фильтры и поля форм */
 .toolbar {
   margin-bottom: 28px;
   padding: 18px;
@@ -498,8 +505,8 @@ button,
   grid-template-columns: 2fr 1fr 1fr auto;
   gap: 14px;
   align-items: end;
-  border-radius: var(--radius);
-  box-shadow: inset 5px 5px 12px var(--dark-shadow), inset -5px -5px 12px var(--white-shadow);
+  border-radius: var(--скругление);
+  box-shadow: inset 5px 5px 12px var(--темная-тень), inset -5px -5px 12px var(--светлая-тень);
 }
 
 .field {
@@ -508,14 +515,14 @@ button,
 }
 
 .field label {
-  color: var(--text);
+  color: var(--текст);
   font-size: 0.84rem;
   font-weight: 750;
 }
 
 .field small,
 .form-note {
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 0.8rem;
 }
 
@@ -525,11 +532,11 @@ button,
   width: 100%;
   min-height: 48px;
   padding: 12px 15px;
-  color: var(--text);
-  background: var(--surface);
+  color: var(--текст);
+  background: var(--поверхность);
   border: 0;
   border-radius: 13px;
-  box-shadow: inset 4px 4px 9px var(--dark-shadow), inset -4px -4px 9px var(--white-shadow);
+  box-shadow: inset 4px 4px 9px var(--темная-тень), inset -4px -4px 9px var(--светлая-тень);
   outline: none;
 }
 
@@ -546,9 +553,10 @@ button,
 .input:focus,
 .select:focus,
 .textarea:focus {
-  box-shadow: inset 4px 4px 9px var(--dark-shadow), inset -4px -4px 9px var(--white-shadow), 0 0 0 3px rgba(37, 99, 235, 0.24);
+  box-shadow: inset 4px 4px 9px var(--темная-тень), inset -4px -4px 9px var(--светлая-тень), 0 0 0 3px rgba(37, 99, 235, 0.24);
 }
 
+/* Каталоги вакансий и студентов */
 .content-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 310px;
@@ -568,9 +576,9 @@ button,
   padding: 24px;
   display: grid;
   gap: 18px;
-  background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: 9px 9px 20px var(--dark-shadow), -9px -9px 20px var(--white-shadow);
+  background: var(--поверхность);
+  border-radius: var(--скругление);
+  box-shadow: 9px 9px 20px var(--темная-тень), -9px -9px 20px var(--светлая-тень);
 }
 
 .job-card {
@@ -583,8 +591,8 @@ button,
   height: 58px;
   display: grid;
   place-items: center;
-  color: var(--accent-dark);
-  background: var(--accent-soft);
+  color: var(--темный-акцент);
+  background: var(--светлый-акцент);
   border-radius: 18px;
   font-weight: 850;
   box-shadow: inset 3px 3px 8px rgba(120, 145, 190, 0.32), inset -3px -3px 8px rgba(255, 255, 255, 0.82);
@@ -598,7 +606,7 @@ button,
 
 .card-subtitle {
   margin: 5px 0 0;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 0.92rem;
 }
 
@@ -615,29 +623,29 @@ button,
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  color: var(--accent-dark);
-  background: var(--accent-soft);
+  color: var(--темный-акцент);
+  background: var(--светлый-акцент);
   font-size: 0.78rem;
   font-weight: 750;
 }
 
 .status-success {
-  color: var(--success);
+  color: var(--успех);
   background: rgba(35, 122, 87, 0.12);
 }
 
 .status-warning {
-  color: var(--warning);
+  color: var(--предупреждение);
   background: rgba(161, 92, 8, 0.12);
 }
 
 .status-danger {
-  color: var(--danger);
+  color: var(--опасность);
   background: rgba(182, 59, 74, 0.12);
 }
 
 .price {
-  color: var(--text);
+  color: var(--текст);
   font-weight: 850;
   white-space: nowrap;
 }
@@ -646,8 +654,8 @@ button,
   padding: 24px;
   position: sticky;
   top: 98px;
-  border-radius: var(--radius);
-  box-shadow: inset 5px 5px 12px var(--dark-shadow), inset -5px -5px 12px var(--white-shadow);
+  border-radius: var(--скругление);
+  box-shadow: inset 5px 5px 12px var(--темная-тень), inset -5px -5px 12px var(--светлая-тень);
 }
 
 .sidebar h2,
@@ -656,7 +664,7 @@ button,
 }
 
 .sidebar p {
-  color: var(--muted);
+  color: var(--приглушенный-текст);
 }
 
 .sidebar .button {
@@ -678,15 +686,16 @@ button,
   width: 76px;
   height: 76px;
   object-fit: cover;
-  border: 6px solid var(--surface);
+  border: 6px solid var(--поверхность);
   border-radius: 24px;
-  box-shadow: 6px 6px 13px var(--dark-shadow), -6px -6px 13px var(--white-shadow);
+  box-shadow: 6px 6px 13px var(--темная-тень), -6px -6px 13px var(--светлая-тень);
 }
 
 .student-card .button {
   margin-top: 14px;
 }
 
+/* Детальные страницы, формы и авторизация */
 .detail-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 350px;
@@ -700,9 +709,9 @@ button,
 .profile-header,
 .chat-panel {
   padding: clamp(24px, 4vw, 40px);
-  background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: 11px 11px 26px var(--dark-shadow), -11px -11px 26px var(--white-shadow);
+  background: var(--поверхность);
+  border-radius: var(--скругление);
+  box-shadow: 11px 11px 26px var(--темная-тень), -11px -11px 26px var(--светлая-тень);
 }
 
 .detail-panel h2,
@@ -717,7 +726,7 @@ button,
 
 .detail-panel p,
 .detail-panel li {
-  color: var(--muted);
+  color: var(--приглушенный-текст);
 }
 
 .detail-panel li + li {
@@ -732,13 +741,13 @@ button,
 
 .meta-box {
   padding: 16px;
-  border-radius: var(--radius-small);
-  box-shadow: inset 4px 4px 9px var(--dark-shadow), inset -4px -4px 9px var(--white-shadow);
+  border-radius: var(--маленькое-скругление);
+  box-shadow: inset 4px 4px 9px var(--темная-тень), inset -4px -4px 9px var(--светлая-тень);
 }
 
 .meta-box span {
   display: block;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 0.8rem;
 }
 
@@ -761,7 +770,7 @@ button,
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 0.9rem;
 }
 
@@ -789,7 +798,7 @@ button,
 }
 
 .auth-card > p {
-  color: var(--muted);
+  color: var(--приглушенный-текст);
 }
 
 .auth-form {
@@ -800,15 +809,16 @@ button,
 
 .auth-footer {
   margin: 24px 0 0;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   text-align: center;
 }
 
 .auth-footer a {
-  color: var(--accent-dark);
+  color: var(--темный-акцент);
   font-weight: 750;
 }
 
+/* Профиль пользователя и личный кабинет */
 .profile-header {
   display: grid;
   grid-template-columns: 132px minmax(0, 1fr) auto;
@@ -820,9 +830,9 @@ button,
   width: 132px;
   height: 132px;
   object-fit: cover;
-  border: 8px solid var(--surface);
+  border: 8px solid var(--поверхность);
   border-radius: 34px;
-  box-shadow: 8px 8px 18px var(--dark-shadow), -8px -8px 18px var(--white-shadow);
+  box-shadow: 8px 8px 18px var(--темная-тень), -8px -8px 18px var(--светлая-тень);
 }
 
 .profile-header h1 {
@@ -834,7 +844,7 @@ button,
 
 .profile-header p {
   margin: 9px 0 0;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
 }
 
 .profile-layout {
@@ -857,7 +867,7 @@ button,
 
 .timeline-item {
   padding-left: 18px;
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--акцент);
 }
 
 .timeline-item h3,
@@ -867,7 +877,7 @@ button,
 
 .timeline-item p {
   margin-top: 5px;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
 }
 
 .dashboard-grid {
@@ -879,12 +889,12 @@ button,
 
 .dashboard-stat {
   padding: 22px;
-  border-radius: var(--radius);
-  box-shadow: 8px 8px 18px var(--dark-shadow), -8px -8px 18px var(--white-shadow);
+  border-radius: var(--скругление);
+  box-shadow: 8px 8px 18px var(--темная-тень), -8px -8px 18px var(--светлая-тень);
 }
 
 .dashboard-stat span {
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 0.85rem;
 }
 
@@ -905,6 +915,7 @@ button,
   border-radius: 18px;
 }
 
+/* Страница сообщений */
 .messages-layout {
   display: grid;
   grid-template-columns: 360px minmax(0, 1fr);
@@ -919,11 +930,11 @@ button,
 .message-row {
   grid-template-columns: 54px minmax(0, 1fr);
   padding: 15px;
-  box-shadow: 6px 6px 14px var(--dark-shadow), -6px -6px 14px var(--white-shadow);
+  box-shadow: 6px 6px 14px var(--темная-тень), -6px -6px 14px var(--светлая-тень);
 }
 
 .message-row.active {
-  box-shadow: inset 4px 4px 9px var(--dark-shadow), inset -4px -4px 9px var(--white-shadow);
+  box-shadow: inset 4px 4px 9px var(--темная-тень), inset -4px -4px 9px var(--светлая-тень);
 }
 
 .message-row .avatar {
@@ -940,7 +951,7 @@ button,
 
 .message-row p {
   margin-top: 3px;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 0.84rem;
 }
 
@@ -970,7 +981,7 @@ button,
 }
 
 .chat-head p {
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   font-size: 0.85rem;
 }
 
@@ -986,17 +997,17 @@ button,
 .bubble {
   max-width: 72%;
   padding: 12px 15px;
-  color: var(--text);
-  background: var(--surface);
+  color: var(--текст);
+  background: var(--поверхность);
   border-radius: 16px;
-  box-shadow: inset 3px 3px 7px var(--dark-shadow), inset -3px -3px 7px var(--white-shadow);
+  box-shadow: inset 3px 3px 7px var(--темная-тень), inset -3px -3px 7px var(--светлая-тень);
 }
 
 .bubble.mine {
   margin-left: auto;
   color: #fff;
-  background: var(--accent);
-  box-shadow: 5px 5px 12px var(--dark-shadow), -4px -4px 10px var(--white-shadow);
+  background: var(--акцент);
+  box-shadow: 5px 5px 12px var(--темная-тень), -4px -4px 10px var(--светлая-тень);
 }
 
 .chat-compose {
@@ -1008,8 +1019,8 @@ button,
 .empty-state {
   padding: 58px 28px;
   text-align: center;
-  border-radius: var(--radius);
-  box-shadow: inset 5px 5px 12px var(--dark-shadow), inset -5px -5px 12px var(--white-shadow);
+  border-radius: var(--скругление);
+  box-shadow: inset 5px 5px 12px var(--темная-тень), inset -5px -5px 12px var(--светлая-тень);
 }
 
 .space-top {
@@ -1023,18 +1034,19 @@ button,
 .empty-state p {
   max-width: 50ch;
   margin: 10px auto 20px;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
 }
 
 .alert {
   margin-bottom: 24px;
   padding: 16px 18px;
-  border-left: 4px solid var(--accent);
-  background: var(--accent-soft);
-  border-radius: 0 var(--radius-small) var(--radius-small) 0;
-  color: var(--accent-dark);
+  border-left: 4px solid var(--акцент);
+  background: var(--светлый-акцент);
+  border-radius: 0 var(--маленькое-скругление) var(--маленькое-скругление) 0;
+  color: var(--темный-акцент);
 }
 
+/* Подвал сайта */
 .site-footer {
   padding: 44px 0 28px;
   border-top: 1px solid rgba(104, 117, 141, 0.16);
@@ -1053,7 +1065,7 @@ button,
 
 .footer-grid p,
 .footer-grid a {
-  color: var(--muted);
+  color: var(--приглушенный-текст);
 }
 
 .footer-links {
@@ -1067,23 +1079,24 @@ button,
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  color: var(--muted);
+  color: var(--приглушенный-текст);
   border-top: 1px solid rgba(104, 117, 141, 0.16);
   font-size: 0.85rem;
 }
 
+/* Темная тема включается автоматически из настроек устройства */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #202938;
-    --surface: #202938;
-    --surface-strong: #273244;
-    --text: #eef3fb;
-    --muted: #aeb9cc;
-    --accent: #6697ff;
-    --accent-dark: #b9d0ff;
-    --accent-soft: #2d4167;
-    --white-shadow: rgba(65, 80, 105, 0.72);
-    --dark-shadow: rgba(7, 12, 21, 0.72);
+    --фон: #202938;
+    --поверхность: #202938;
+    --светлая-поверхность: #273244;
+    --текст: #eef3fb;
+    --приглушенный-текст: #aeb9cc;
+    --акцент: #6697ff;
+    --темный-акцент: #b9d0ff;
+    --светлый-акцент: #2d4167;
+    --светлая-тень: rgba(65, 80, 105, 0.72);
+    --темная-тень: rgba(7, 12, 21, 0.72);
   }
 
   .site-header {
@@ -1105,6 +1118,7 @@ button,
   }
 }
 
+/* Адаптация для планшетов */
 @media (max-width: 980px) {
   .main-nav,
   .nav-auth {
@@ -1148,9 +1162,10 @@ button,
   }
 }
 
+/* Адаптация для телефонов */
 @media (max-width: 760px) {
   .container {
-    width: min(calc(100% - 28px), var(--container));
+    width: min(calc(100% - 28px), var(--ширина-контейнера));
   }
 
   .page-main {
@@ -1271,6 +1286,7 @@ button,
   }
 }
 
+/* Отключение анимаций для пользователей с соответствующей настройкой */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

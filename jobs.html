@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Верхняя часть сайта: логотип, меню и ссылки на аккаунт -->
   <a class="skip-link" href="#main">Перейти к содержанию</a>
   <header class="site-header"><div class="container nav-shell">
     <a class="brand" href="index.html"><span class="brand-mark">HM</span><span>HelpMate</span></a>
@@ -16,9 +17,11 @@
     <details class="mobile-menu"><summary class="button button-secondary button-small">Меню</summary><nav class="mobile-panel"><a href="index.html">Главная</a><a href="jobs.html">Вакансии</a><a href="students.html">Студенты</a><a href="post-job.html">Разместить вакансию</a><a href="profile.html">Профиль</a></nav></details>
   </div></header>
 
+  <!-- Основное уникальное содержимое текущей страницы -->
   <main id="main" class="page-main">
     <div class="container">
       <header class="page-heading"><p class="eyebrow">Для студентов</p><h1>Найдите работу под свой график</h1><p>Стажировки, проектная работа и подработка от компаний Казахстана.</p></header>
+      <!-- Форма собирает данные пользователя; в прототипе сервер не подключен -->
       <form class="toolbar" action="jobs.html">
         <div class="field"><label for="search">Поиск</label><input class="input" id="search" type="search" placeholder="Должность или навык"></div>
         <div class="field"><label for="city">Город</label><select class="select" id="city"><option>Все города</option><option>Алматы</option><option>Астана</option><option>Шымкент</option></select></div>
@@ -54,6 +57,7 @@
     </div>
   </main>
 
+  <!-- Нижняя часть сайта с полезными ссылками -->
   <footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 HelpMate</span><a href="about.html">О проекте</a></div></div></footer>
 </body>
 </html>
